@@ -1,0 +1,158 @@
+Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form2.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If TextBox1.Text = "cereal67" And TextBox2.Text = "yym85832068" Then
+
+            Form4.Show()
+        Me.Hide()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+            If CheckBox1.Checked Then TextBox1.Text = "cereal67"
+        End If
+    End Sub
+
+    Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+End Class
+
+
+Public Class Form2
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
+
+    End Sub
+End Class
+
+
+Public Class Form4
+    Private Sub ProgressBar1_Click(sender As Object, e As EventArgs) 
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ListBox1.Items.Add(TextBox4.Text)
+        TextBox4.Text = ""
+        TextBox4.Focus()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ListBox1.Items.Remove(ListBox1.Text)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Form5.Show()
+        Me.Hide()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+
+    End Sub
+
+    Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Form5.ListBox1.Items.Add(ListBox1.Text)
+        ListBox1.Items.Remove(ListBox1.Text)
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+End Class
+
+
+Public Class Form5
+
+    Dim num1, num2, num3, num4, num5, num6 As Integer
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Form4.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ListBox1.Items.Remove(ListBox1.Text)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        num6 = Label5.Text
+        Me.Hide()
+        Form1.Show()
+        MsgBox("수고하셨습니다!! 다른습관을 위해 화이팅입니다!!")
+        Label5.Text = num6 + 1
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Label1.Text = TimeOfDay
+        If Label1.Text = "오전 12:00:00" Then
+            num1 = Val(TextBox1.Text)
+            num2 = Val(TextBox2.Text)
+            num3 = Val(TextBox3.Text)
+            num4 = Val(TextBox4.Text)
+            num5 = Val(TextBox5.Text)
+            Form1.Show()
+            Me.Hide()
+            MsgBox((num1 + num2 + num3 + num4 + num5) * 2 & "점 입니다!", vbOKOnly, "점수는??")
+
+        End If
+    End Sub
+
+    Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+
+    End Sub
+End Class
+
+
